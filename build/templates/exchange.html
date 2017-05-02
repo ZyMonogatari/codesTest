@@ -1,0 +1,136 @@
+
+<div class="video-background">
+	<img src="/assets/img/background.jpg" ng-if="mobile" style="width: 100%; height: 100%;">
+    <div class="video-foreground" ng-if="!mobile">
+      <iframe src="https://www.youtube.com/embed/0dbig-gLoCo?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=0dbig-gLoCo" frameborder="0" allowfullscreen></iframe>      
+    </div>
+    <img src="/assets/img/sello.png" class="wallsSeal" ng-style="{'width' : selloSize, 'height' : selloSize}" id="seal">
+    <img src="/assets/img/logo.png" class="wallsLogo">
+    <div  class="whiteLinesDiv" style="width: 90%">
+    	<img src="/assets/img/lineas-blancas-proto.png" class="lineas-blancas">
+    </div>
+</div>
+
+<div class="fondoDegradado" >
+	<div class="infoDiv"  id="infoDiv">
+    	<img src="/assets/img/proto.png" class="lineas-negro" id="blackLines">	
+    	<h2 class="title">Participa y obtén un cupón para la promoción</h2>
+
+    	<div class="priceDiv">
+    		<img src="/assets/img/precio.png" class="priceImg" >
+    	</div>
+    	
+    	<div class="instruction1">
+
+    		<h6>
+	    		<img src="/assets/img/sobreIcon.png" class="icon">
+	    		dejanos tu nombre y tu email
+    		</h6>
+    	</div>
+
+    	<div class="instruction2">
+    		<h6>
+	    		<img src="/assets/img/cuponIcon.png" class="icon">
+	    		espera a que se genere tu cupon
+    		</h6>
+    	</div>
+
+    	<div class="instruction3">
+    		<h6>
+    			<img src="/assets/img/trofeoIcon.png" class="icon">
+    			dirigete a una de nuestras sedes*
+    		</h6>
+    	</div>
+    	<h6 class="clause">*Al completar el formulario dirigete a una de nuestras sucursales con tus datos, entrega el numero de cupón y disfruta de esta gran promoción de <strong>¡Un corte de cabello por tan solo $120 pesos!</strong>.</h6>
+	</div>
+	<h3 class="validTitle">
+		<img src="/assets/img/starIcon.png" class="icon">
+		valido unicamente en las siguientes sucusrsales
+	</h3>
+	<div>
+		<div class="rightSucursalDiv">
+			<div class="sucursalPhoto">
+				<img src="/assets/img/sucurportillo.png">
+			</div>
+			<div class="sucursalInfo">
+				<h3 >WALL'S KABAH</h3>
+				<h6 class="sucursalInfoText">SMZ 38 MZ 9 LT 1 AL 15 LOCAL #5</h6>
+				<h6 class="sucursalInfoText">AV. KABAH, PLAZA REAL (FRENTE A UNID)</h6>
+				<h6 class="sucursalInfoText">CANCÚN, MEXICO </h6>
+				<h6 class="sucursalInfoText">
+					<img src="/assets/img/phoneIcon.png" class="icon">
+					(998) 206 8098
+				</h6>
+				<h6 class="sucursalInfoText">
+					<img src="/assets/img/whatsappIcon.png" class="icon">
+					(998) 293 4931
+				</h6>
+			</div>
+		</div>
+
+		<div class="leftSucursalDiv">
+			<div class="sucursalPhoto">
+				<img src="/assets/img/sucur3.png">
+			</div>
+			<div class="sucursalInfo">
+				<h3 >WALL'S LAS TORRES</h3>
+				<h6 class="sucursalInfoText">SMZ 510 MZ 9 LT 10 Y 12</h6>
+				<h6 class="sucursalInfoText">PLANTA ALTA PLAZA BAMBOO,</h6>
+				<h6 class="sucursalInfoText">CANCÚN, MEXICO </h6>
+				<h6 class="sucursalInfoText">
+					<img src="/assets/img/phoneIcon.png" class="icon">
+					(998) 251 0726
+				</h6>
+				<h6 class="sucursalInfoText">
+					<img src="/assets/img/whatsappIcon.png" class="icon">
+					(998) 293 4599
+				</h6>
+			</div>
+		</div>
+	</div>
+	<div class="whiteFooter">
+		<div>
+			<div>
+				<h5 class="footerLeft">
+					<img src="/assets/img/redes.png">
+					/wallsbarbershop
+				</h5>
+			</div>
+			<div class="footerCenter">
+				<h5>
+					<img src="/assets/img/phoneIcon.png" class="icon">
+					044 9981 45 96 50
+				</h5>
+			</div>
+			<div class="footerRight">
+				<h5>
+					<img src="/assets/img/sobreIcon.png" class="icon">
+					franquicias@yosoywalls.com
+				</h5>
+			</div>
+		</div>
+		<div class="blackFooter">
+			<h6 class="brand">diseño <strong>Chicle y Pega Estudio Creativo</strong></h6>
+		</div>
+	</div>
+
+</div>
+
+
+
+<div class="formulario" ng-style="{'width': formWidth, 'height' : formHeight}" >
+	<input ng-if="!codeInfo && !used && !spinner" type="text" placeholder="Codigo" id="outline-input" ng-model="code.code">
+	<a ng-if="!codeInfo && !used && !spinner" class="dark large button bottomButton" ng-click="getCodeInfo()">Enviar</a>
+	<div ng-if="codeInfo && !used && !spinner" class="cuponInfo" >
+		<h3 style="color: white;" ng-model="codeInfo">{{codeInfo.name}}</h3>
+		<h4 style="color: white;" ng-model="codeInfo">{{codeInfo.description}}</h4>
+		<h4 style="color: white;" ng-model="codeInfo">{{codeInfo.code}}</h4>
+	</div>
+	<div ng-if="used" class="usedCupon" >
+		<h2 style="color: white;" ng-model="used">{{used}}</h2>
+	</div>
+
+	<a  ng-if="codeInfo && !used" class="dark large button bottomButton" ng-click="useCode()" >Cobrar</a>
+	<img src="/assets/img/spinner.gif" class="spinner" ng-if="spinner">
+
+</div>	

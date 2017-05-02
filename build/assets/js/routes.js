@@ -1,0 +1,1 @@
+var foundationRoutes = [{"name":"exchange","url":"/exchange","controller":"exchangeCtrl","path":"templates/exchange.html"},{"name":"home","url":"/","controller":"homeCtrl","path":"templates/home.html"}]; 
