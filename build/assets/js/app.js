@@ -118,7 +118,7 @@ angular.module('application').controller('homeCtrl',
    $scope.user = {};
    var lineasBlancasWidth = 1242;
    var lineasBlancasActualWidth = screen.width / lineasBlancasWidth;
-   var selloSize = 610 * lineasBlancasActualWidth;
+   var selloSize = (610 * lineasBlancasActualWidth) * 0.9;
    $scope.selloSize = selloSize + 'px';
    var formWidth = 765 * lineasBlancasActualWidth;
    var formHeight = 366 * lineasBlancasActualWidth;
