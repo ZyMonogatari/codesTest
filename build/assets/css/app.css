@@ -143,9 +143,7 @@
   top: 100%;
   width: 100%;
   height: 150%;
-  padding: 0;
-  display: block;
-  overflow: auto; }
+  padding: 0; }
 
 .cupon {
   position: absolute;
@@ -516,9 +514,7 @@
     top: 100%;
     width: 100%;
     height: 100%;
-    padding: 0;
-    display: block;
-    overflow: auto; } }
+    padding: 0; } }
 
 @media only screen and (max-width: 1007px) {
   .footerLeft {
@@ -543,7 +539,7 @@
     text-align: center;
     top: 45%; } }
 
-@media only screen and (min-width: 1651px) {
+@media only screen and (min-width: 1324px) {
   .fondoDegradado {
     position: absolute;
     z-index: 1;
@@ -554,9 +550,7 @@
     top: 100%;
     width: 100%;
     height: 170%;
-    padding: 0;
-    display: block;
-    overflow: auto; } }
+    padding: 0; } }
 
 @media only screen and (max-width: 1279px) {
   .infoDiv {
@@ -625,9 +619,7 @@
     top: 100%;
     width: 100%;
     height: 250%;
-    padding: 0;
-    display: block;
-    overflow: auto; }
+    padding: 0; }
   .wallsSeal {
     position: absolute;
     z-index: 1;
