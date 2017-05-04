@@ -133,6 +133,6 @@ angular.module('application').controller('homeCtrl',
       });
       
    };
-
+   
    
 }]);

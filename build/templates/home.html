@@ -31,28 +31,28 @@
 
     		<h6 class="OpenSans">
 	    		<img src="/assets/img/sobreIcon.png" class="icon">
-	    		dejanos tu nombre y tu email
+	    		Déjanos tu nombre y tu email
     		</h6>
     	</div>
 
     	<div class="instruction2">
     		<h6 class="OpenSans">
 	    		<img src="/assets/img/cuponIcon.png" class="icon">
-	    		espera a que se genere tu cupon
+	    		Espera a que se genere tu cupón
     		</h6>
     	</div>
 
     	<div class="instruction3">
     		<h6 class="OpenSans">
     			<img src="/assets/img/trofeoIcon.png" class="icon">
-    			dirigete a una de nuestras sedes*
+    			Dirígete a una de nuestras sedes*
     		</h6>
     	</div>
-    	<h6 class="clause OpenSans-SemiboldItalic">*Al completar el formulario dirigete a una de nuestras sucursales con tus datos, entrega el numero de cupón y disfruta de esta gran promoción de <strong>¡Un corte de cabello por tan solo $120 pesos!</strong>.</h6>
+    	<h6 class="clause OpenSans-SemiboldItalic">*Al completar el formulario dirígete a una de nuestras sucursales con tus datos, entrega el número de cupón y disfruta de esta gran promoción de <strong>¡Un corte de cabello por tan solo $120 pesos!</strong>.</h6>
 	</div>
 	<h3 class="validTitle OpenSans-Italic">
 		<img src="/assets/img/starIcon.png" class="icon">
-		valido unicamente en las siguientes sucusrsales
+		Válido únicamente en las siguientes sucusrsales
 	</h3>
 	<div>
 		<div class="rightSucursalDiv">
@@ -63,7 +63,7 @@
 				<h3 class="OpenSans-Bold">WALL'S KABAH</h3>
 				<h6 class="sucursalInfoText OpenSans">SMZ 38 MZ 9 LT 1 AL 15 LOCAL #5</h6>
 				<h6 class="sucursalInfoText OpenSans">AV. KABAH, PLAZA REAL (FRENTE A UNID)</h6>
-				<h6 class="sucursalInfoText OpenSans">CANCÚN, MEXICO </h6>
+				<h6 class="sucursalInfoText OpenSans">CANCÚN, MÉXICO </h6>
 				<h6 class="sucursalInfoText OpenSans">
 					<img src="/assets/img/phoneIcon.png" class="icon">
 					(998) 206 8098
@@ -83,7 +83,7 @@
 				<h3 class="OpenSans-Bold">WALL'S LAS TORRES</h3>
 				<h6 class="sucursalInfoText OpenSans">SMZ 510 MZ 9 LT 10 Y 12</h6>
 				<h6 class="sucursalInfoText OpenSans">PLANTA ALTA PLAZA BAMBOO,</h6>
-				<h6 class="sucursalInfoText OpenSans">CANCÚN, MEXICO </h6>
+				<h6 class="sucursalInfoText OpenSans">CANCÚN, MÉXICO </h6>
 				<h6 class="sucursalInfoText OpenSans">
 					<img src="/assets/img/phoneIcon.png" class="icon">
 					(998) 251 0726
@@ -126,9 +126,12 @@
 
 
 <div class="formulario" ng-style="{'width': formWidth, 'height' : formHeight}" >
-	<input ng-if="!code &&!spinner" type="text" placeholder="Nombre" id="outline-input" ng-model="user.name" class="Roboto-Regular">
-	<input ng-if="!code &&!spinner" type="text" placeholder="E-mail" id="outline-input" ng-model="user.email" class="Roboto-Regular">
-	<a ng-if="!code &&!spinner" class="dark large button bottomButton Roboto-Regular" ng-click="createCode()">Enviar</a>
+	<input ng-if="!code &&!spinner" type="text" placeholder="Nombre" id="outline-input" ng-model="user.name" class="Roboto-Regular name">
+	<input ng-if="!code &&!spinner" type="text" placeholder="E-mail" id="outline-input" ng-model="user.email" class="Roboto-Regular email">
+	<!--<a ng-if="!code &&!spinner" class="dark large button bottomButton Roboto-Regular" ng-click="createCode()"><h6>Enviar</h6></a>-->
+	
+		<img src="/assets/img/button.png" class="bottomButton">
+	
 	<img src="/assets/img/spinner.gif" class="spinner" ng-if="spinner">
 	<h3 ng-if="code" class="thanks RobotoBold">¡MUCHAS GRACIAS POR PARTICIPAR!</h3>
 </div>	
