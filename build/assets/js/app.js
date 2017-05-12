@@ -35,7 +35,7 @@
 
 angular.module('application')
 .factory('$codeApi', function($http){
-    var baseUrl = 'http://localhost/dataBaseTests/';
+    var baseUrl = 'http://www.wallsbarbershop.com.mx/promoCodes/php/';
 
     var post = function(url, body){
       body = body || {};
@@ -73,7 +73,7 @@ angular.module('application').controller('exchangeCtrl',
    window.mobileAndTabletcheck();
    var lineasBlancasWidth = 1242;
    var lineasBlancasActualWidth = screen.width / lineasBlancasWidth;
-   var selloSize = 610 * lineasBlancasActualWidth;
+   var selloSize = (610 * lineasBlancasActualWidth) * 0.9;
    $scope.selloSize = selloSize + 'px';
    var formWidth = 765 * lineasBlancasActualWidth;
    var formHeight = 366 * lineasBlancasActualWidth;
